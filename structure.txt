@@ -1,0 +1,12 @@
+Blockchain-app/
+├── public/
+│   ├── css/
+│   │   └── styles.css
+├── views/
+│   ├── index.ejs
+│   └── error.ejs
+├── routes/
+│   └── cryptoRoutes.js
+├── app.js
+├── package.json
+└── README.md

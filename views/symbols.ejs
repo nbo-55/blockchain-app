@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crypto Prices</title>
+    <!-- Link to the CSS file for styling -->
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <h1>Available Trading Symbols</h1>
+
+    <% if (data && data.length > 0) { %>
+    <ul>
+      <% data.forEach(symbol => { %>
+      <!-- Menampilkan simbol trading yang terdiri dari base_currency dan counter_currency -->
+      <li><%= symbol.base_currency %>/<%= symbol.counter_currency %></li>
+      <% }) %>
+    </ul>
+    <% } else { %>
+    <!-- Jika tidak ada simbol yang ditemukan -->
+    <p>No symbols available.</p>
+    <% } %>
+  </body>
+</html>

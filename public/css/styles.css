@@ -1,0 +1,27 @@
+/* Basic styling for the page */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+/* Styling for the table */
+table {
+    width: 60%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+/* Styling for table headers and cells */
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Styling for the refresh button */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}

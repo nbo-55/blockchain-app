@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crypto Prices</title>
+    <!-- Link to the CSS file for styling -->
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <h1>Crypto Prices</h1>
+    <% if (data) { %>
+    <!-- Table to display cryptocurrency prices -->
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Symbol</th>
+          <th>Price (USD)</th>
+          <th>24h Change (%)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% data.forEach(ticker => { %>
+        <!-- Loop through each ticker and display its data -->
+        <tr>
+          <td><%= ticker.symbol %></td>
+          <td><%= ticker.last_trade_price %></td>
+          <td><%= ticker.price_24h %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    <% } else { %>
+    <!-- Message to display if no data is available -->
+    <p>No data available. Try again later.</p>
+    <% } %>
+    <!-- Button to refresh the cryptocurrency prices -->
+    <button onclick="window.location.href='/crypto/tickers'">
+      Refresh Prices
+    </button>
+  </body>
+</html>
